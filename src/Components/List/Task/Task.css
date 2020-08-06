@@ -1,0 +1,13 @@
+.task-container {
+  display: flex !important;
+  justify-content: space-between;
+  margin-top: 5px;
+  align-items: center;
+  padding-right: 0;
+}
+
+.task {
+  margin-top: 17px;
+  display: flex;
+  align-content: center;
+}
