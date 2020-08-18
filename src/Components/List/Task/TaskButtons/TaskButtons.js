@@ -9,7 +9,6 @@ async function deleteTask(event) {
     method: "DELETE",
   });
   console.log(idToDelete);
-  window.location.reload();
 }
 
 async function editTask(event) {
@@ -37,7 +36,7 @@ async function setStatus(id, status) {
   window.location.reload();
 }
 
-function TaskButtons({ id, extra }) {
+function TaskButtons({ id, extra, loadTask }) {
   let checked = extra == "1" ? true : false;
   return (
     <div className="task-buttons">
@@ -64,7 +63,7 @@ function TaskButtons({ id, extra }) {
         id={id}
         type="button"
         className="btn btn-danger"
-        onClick={deleteTask}
+        onClick={deleteTask, loadTask}
       >
         Delete
       </button>
